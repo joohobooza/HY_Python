@@ -55,4 +55,14 @@ stat1.min() # 최소값
 # arange
 x = np.arange(-2,1, 0.5)
 
+# y=2*x**2 + 10 함수를 그려보자
+x= np.arange(-10,10, 0.1)
+y = 2*x**2 + 10
 
+import matplotlib.pyplot as plt
+plt.plot(x,y)
+
+# y=sin(x) 그래프를 그려보자
+x2 = np.arange(20,40, 0.2)
+y2 = np.sin(x2)
+plt.plot(x2,y2)
