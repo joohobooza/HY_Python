@@ -75,5 +75,9 @@ accident2.to_excel(xlfile, sheet_name = 'accident2')
 # 엑셀 파일 저장
 xlfile.save()
 
+# 워킹 디렉토리 확인
+import os
+os.getcwd()
+
 
 
