@@ -12,7 +12,6 @@ Created on Sat Nov 24 07:53:40 2018
 # Analytic Solution (binomial Tree 유사 방법)
 # 반복문을 사용하여 모든 케이스를 그려보자
 
-import numpy as np
 import pandas as pd
 
 cnt=0
@@ -26,7 +25,6 @@ for _1st in range(2):
                 cnt = cnt + 1
 print(results)
 
-results_np = np.array(results)
 results_df = pd.DataFrame(results, columns = ['1','2','3','4'])
 
 # 횟수 출력
