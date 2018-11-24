@@ -29,11 +29,11 @@ results_df = pd.DataFrame(results, columns = ['1','2','3','4'])
 
 # 횟수 출력
 results_df['total'] = results_df.sum(axis=1) #axis = 0은 컬럼 합계
-results_df['total'].plot.hist(bins = 5)
+results_df['total'].plot.hist(bins = 5) #bin=5는 5개로 구분하라는 뜻
 
 # 퍼센트로 구해보자
 freq = results_df.groupby('total').total.count() #이건 결과값이 Series임
-freq_df = pd.DataFrame(freq)
+freq_df = pd.DataFrame(freq) 
 freq_df['percent'] = freq_df['total']/cnt
 freq_df.plot.bar(y='percent')
 

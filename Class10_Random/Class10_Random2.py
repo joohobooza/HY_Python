@@ -17,7 +17,7 @@ xmax = 1
 step = 0.01
 
 x= np.arange(xmin,xmax,step)
-func_y = lambda x: x*2-1
+func_y = lambda x: x**2-1
 y= func_y(x)
 
 ymax = y.max()
@@ -52,9 +52,3 @@ count_yes = results_df.query("final==1").final.count()
 count_all = results_df.final.count()
 estimate = count_yes/count_all * rect_area
 print(estimate)
-
-
-
-
-
-

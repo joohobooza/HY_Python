@@ -8,7 +8,6 @@ Created on Sat Nov 24 09:30:20 2018
 # 이번에는 random을 활용해보자.(Monte Carlo)
 # 동전의 앞뒤 나올 확률이 다르다고 해보자 
 
-import numpy as np
 import pandas as pd
 import random 
 
@@ -29,7 +28,6 @@ for i in range(iteration):
     results.append(result)
 
 # pandas로 변환
-results_np = np.array(results)
 results_df = pd.DataFrame(results, columns = ['1','2','3','4'])
 
 # 횟수 출력
