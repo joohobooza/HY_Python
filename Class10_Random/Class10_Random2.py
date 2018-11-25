@@ -12,14 +12,17 @@ import random
 import seaborn as sns
 import pandas as pd
 
+# x의 범위를 설정
 xmin = -1
 xmax = 1
 step = 0.01
 
+# x값으로부터 y값을 구한다. 
 x= np.arange(xmin,xmax,step)
-func_y = lambda x: x**2-1
+func_y = lambda x: x**2
 y= func_y(x)
 
+# y의 최대최소값을 구한다. 
 ymax = y.max()
 ymin = y.min()
 
@@ -30,16 +33,16 @@ rect_area = (xmax-xmin) * (ymax-ymin)
 iteration = 1000
 
 plt.plot(x,y)
-results = []
-rnd_xs = []
-rnd_ys = []
+results = [] # 범위 안에 속하는지 저장, 1이면 함수값보다 작다. 0은 함수값보다 크다
+rnd_xs = []  # 랜덤을 통해 나온 x값을 저장
+rnd_ys = []  # 랜덤을 통해 나온 y값을 저장
 for i in range(iteration):
     rnd = random.random()
-    rnd_x = (xmax-xmin)*rnd + xmin
+    rnd_x = (xmax-xmin)*rnd + xmin  # rnd는 0~1 사이값이어서 범위를 조정
     rnd = random.random()
     rnd_y = (ymax-ymin)*rnd + ymin
     true_y = func_y(rnd_x)
-    result = 1 if rnd_y<=true_y else 0
+    result = 1 if rnd_y<=true_y else 0  # 실제 함수값보다 작으면 1, 크면 0
     results.append(result)
     rnd_xs.append(rnd_x)
     rnd_ys.append(rnd_y)

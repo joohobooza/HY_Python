@@ -22,9 +22,10 @@ def flip_coin(face_prob):
 coins = [0.5, 0.2, 0.6, 0.55] # 앞면 나올 확률이 다음과 같다고 해보자
 iteration = 10000  # 몇번 반복할 지 설정
 
+# 동전을 10000번 던져서 결과를 저장
 results = []
 for i in range(iteration):
-    result = [flip_coin(coin) for coin in coins]
+    result = [flip_coin(coin) for coin in coins] #List comprehension
     results.append(result)
 
 # pandas로 변환
