@@ -29,4 +29,4 @@ print(new_y)
 
 # seaborn으로 여러 변수들의 관계를 한번에 볼 수 있다. 
 g = sns.PairGrid(data)
-g.map(plt.scatter);
+g.map(plt.scatter)
